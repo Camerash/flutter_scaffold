@@ -1,4 +1,14 @@
-include: package:very_good_analysis/analysis_options.3.0.1.yaml
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - '**.freezed.dart'
+    - '**.g.dart'
+    - '**.gr.dart'
+    - 'firebase_options.dart'
+  errors:
+    invalid_annotation_target: ignore # Freezed
+
 linter:
   rules:
-    public_member_api_docs: false
+    type_annotate_public_apis: false
