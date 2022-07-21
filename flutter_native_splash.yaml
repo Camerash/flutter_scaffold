@@ -1,0 +1,4 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: "assets/icons/app_icon_foreground.png"
+  web: false

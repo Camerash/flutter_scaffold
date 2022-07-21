@@ -1,0 +1,21 @@
+key,en,zh-HK,zh-CN
+common.email,Email,電子郵件,电子邮件
+common.password,Password,密碼 ,密码
+common.confirm,Confirm,確認,确认
+common.cancel,Cancel,取消,取消
+common.continueText,Continue,繼續,继续
+error.common,"Error, please try again",發生錯誤，請重試,发生错误，请重试
+error.fieldEmpty,{field} must not be empty,{field} 不能為空,{field} 不能为空
+error.emailFormat,Email format is incorrect,電子郵件格式不正確,电子邮件格式不正确
+error.passwordLength,Password must be at least 6 characters long,密碼必須至少6個字符長,密码必须至少6个字符长
+error.login,Email or Password incorrect,電子郵件或密碼不正確,电子邮件或密码不正确
+error.emailInUse,Email is already in use,電子郵件已經在使用,电子邮件已经在使用
+error.passwordTooWeak,Password too weak,密碼太弱了,密码太弱了
+error.signup,Signup error,註冊錯誤,注册错误
+login.login,Login,登錄,登录
+login.signup,Sign up,註冊,注册
+login.forgotPassword,Forgot password,忘記了密碼,忘记了密码
+login.noAccount,No Account?,沒有帳戶？,没有帐户？
+login.createANewAccount,Create a new account,創建一個新帳戶,创建一个新帐户
+myAccount.title,My Account,我的帳戶,我的帐户
+myAccount.logout,Logout,登出,登出

@@ -1,15 +1,12 @@
-// Copyright (c) 2022, Very Good Ventures
-// https://verygood.ventures
-//
-// Use of this source code is governed by an MIT-style
-// license that can be found in the LICENSE file or at
-// https://opensource.org/licenses/MIT.
-
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_scaffold/core/di/di.dart';
+import 'package:flutter_scaffold/core/hive/hive.dart';
+import 'package:flutter_scaffold/i18n/translations.g.dart';
 
 class AppBlocObserver extends BlocObserver {
   @override
@@ -30,13 +27,19 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
 
-  await runZonedGuarded(
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();
+  await initHive();
+  BlocOverrides.runZoned(
     () async {
-      await BlocOverrides.runZoned(
-        () async => runApp(await builder()),
-        blocObserver: AppBlocObserver(),
+      // Run inside BlocOverrides to benefits from BlocObserver
+      await initDi();
+      runApp(
+        TranslationProvider(
+          child: await builder(),
+        ),
       );
     },
-    (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
+    blocObserver: AppBlocObserver(),
   );
 }
