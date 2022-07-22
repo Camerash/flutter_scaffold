@@ -16,6 +16,7 @@ Heavily modified to accostomed to personal practice
 ## What to expect
 
 This project provides:
+- Multi-flavor app for both iOS and Android
 - API client generation according to endpoints
 - JWT Token support
 - State management with BLoC
@@ -23,7 +24,13 @@ This project provides:
 - App icon generation
 - App splash screen generation
 - Navigation dependent on Auth state changes
-- Provided LoginPage and HomePage as example
+- Provided LoginPage and HomePage that are ready to be used
+
+Thoughtout the projects, there are multiple `TODO`s to guide you through stuff that requires manual configurations.
+
+Also, for iOS specific settings, there are some steps that requires you to perform in XCode for best compatibility:
+- Update bundle identifiers under each configurations
+- Update $(FLAVOR_APP_NAME) under "Build Settings"
 
 ---
 
@@ -43,8 +50,6 @@ $ flutter run --flavor dev --target lib/main_dev.dart
 # Prod
 $ flutter run --flavor prod --target lib/main_prod.dart
 ```
-
-Thoughtout the projects, there are multiple `TODO`s to guide you through stuff that requires manual configurations.
 
 ---
 
