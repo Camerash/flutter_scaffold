@@ -26,6 +26,10 @@ This project provides:
 - Navigation dependent on Auth state changes
 - Provided LoginPage and HomePage that are ready to be used
 
+Minimum Targeting Versions:
+- Android: 21
+- iOS: 12.0
+
 Thoughtout the projects, there are multiple `TODO`s to guide you through stuff that requires manual configurations.
 
 Also, for iOS specific settings, there are some steps that requires you to perform in XCode for best compatibility:
