@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-const _primaryColor = Color(0xFF000000);
+const _primaryColor = Colors.black;
+const _onPrimaryColor = Colors.white;
 
 final themeData = ThemeData(
   appBarTheme: const AppBarTheme(
     systemOverlayStyle: SystemUiOverlayStyle.dark,
-    backgroundColor: Colors.white,
+    backgroundColor: _primaryColor,
     elevation: 0,
     iconTheme: IconThemeData(
-      color: Colors.black,
+      color: _onPrimaryColor,
     ),
     titleTextStyle: TextStyle(
       fontSize: 16,
-      color: Colors.black,
+      color: _onPrimaryColor,
     ),
     centerTitle: true,
   ),
@@ -25,9 +26,9 @@ final themeData = ThemeData(
     surface: Colors.white,
     onSurface: Colors.black,
     primary: _primaryColor,
-    onPrimary: Colors.white,
+    onPrimary: _onPrimaryColor,
     secondary: _primaryColor,
-    onSecondary: Colors.white,
+    onSecondary: _onPrimaryColor,
     error: Colors.red,
     onError: Colors.white,
   ),
