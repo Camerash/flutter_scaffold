@@ -17,5 +17,5 @@ login.signup,Sign up,註冊,注册
 login.forgotPassword,Forgot password,忘記了密碼,忘记了密码
 login.noAccount,No Account?,沒有帳戶？,没有帐户？
 login.createANewAccount,Create a new account,創建一個新帳戶,创建一个新帐户
-myAccount.title,My Account,我的帳戶,我的帐户
-myAccount.logout,Logout,登出,登出
+account.title,My Account,我的帳戶,我的帐户
+account.logout,Logout,登出,登出

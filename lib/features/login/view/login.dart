@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_scaffold/core/di/di.dart';
@@ -6,24 +7,20 @@ import 'package:flutter_scaffold/i18n/translations.g.dart';
 import 'package:flutter_scaffold/utils/extensions/theme.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
+class LoginPage extends StatefulWidget with AutoRouteWrapper {
   @override
-  Widget build(BuildContext context) {
+  Widget wrappedRoute(BuildContext context) {
     return BlocProvider.value(
       value: getIt<AuthCubit>(),
-      child: LoginView(),
+      child: this,
     );
   }
-}
 
-class LoginView extends StatefulWidget {
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<LoginPage> createState() => _LoginViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _LoginViewState extends State<LoginPage> {
   bool _passwordVisible = false;
 
   @override

@@ -5,7 +5,7 @@
  * Locales: 3
  * Strings: 60 (20.0 per locale)
  *
- * Built on 2022-07-21 at 17:45 UTC
+ * Built on 2022-07-22 at 13:46 UTC
  */
 
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api, unnecessary_string_interpolations, avoid_escaping_inner_quotes
@@ -152,7 +152,7 @@ class _TranslationsEn implements BaseTranslations {
 	late final _TranslationsCommonEn common = _TranslationsCommonEn._(_root);
 	late final _TranslationsErrorEn error = _TranslationsErrorEn._(_root);
 	late final _TranslationsLoginEn login = _TranslationsLoginEn._(_root);
-	late final _TranslationsMyAccountEn myAccount = _TranslationsMyAccountEn._(_root);
+	late final _TranslationsAccountEn account = _TranslationsAccountEn._(_root);
 }
 
 // Path: common
@@ -200,9 +200,9 @@ class _TranslationsLoginEn {
 	String get createANewAccount => 'Create a new account';
 }
 
-// Path: myAccount
-class _TranslationsMyAccountEn {
-	_TranslationsMyAccountEn._(this._root);
+// Path: account
+class _TranslationsAccountEn {
+	_TranslationsAccountEn._(this._root);
 
 	final _TranslationsEn _root; // ignore: unused_field
 
@@ -236,7 +236,7 @@ class _TranslationsZhCn extends _TranslationsEn {
 	@override late final _TranslationsCommonZhCn common = _TranslationsCommonZhCn._(_root);
 	@override late final _TranslationsErrorZhCn error = _TranslationsErrorZhCn._(_root);
 	@override late final _TranslationsLoginZhCn login = _TranslationsLoginZhCn._(_root);
-	@override late final _TranslationsMyAccountZhCn myAccount = _TranslationsMyAccountZhCn._(_root);
+	@override late final _TranslationsAccountZhCn account = _TranslationsAccountZhCn._(_root);
 }
 
 // Path: common
@@ -284,9 +284,9 @@ class _TranslationsLoginZhCn extends _TranslationsLoginEn {
 	@override String get createANewAccount => '创建一个新帐户';
 }
 
-// Path: myAccount
-class _TranslationsMyAccountZhCn extends _TranslationsMyAccountEn {
-	_TranslationsMyAccountZhCn._(_TranslationsZhCn root) : this._root = root, super._(root);
+// Path: account
+class _TranslationsAccountZhCn extends _TranslationsAccountEn {
+	_TranslationsAccountZhCn._(_TranslationsZhCn root) : this._root = root, super._(root);
 
 	@override final _TranslationsZhCn _root; // ignore: unused_field
 
@@ -320,7 +320,7 @@ class _TranslationsZhHk extends _TranslationsEn {
 	@override late final _TranslationsCommonZhHk common = _TranslationsCommonZhHk._(_root);
 	@override late final _TranslationsErrorZhHk error = _TranslationsErrorZhHk._(_root);
 	@override late final _TranslationsLoginZhHk login = _TranslationsLoginZhHk._(_root);
-	@override late final _TranslationsMyAccountZhHk myAccount = _TranslationsMyAccountZhHk._(_root);
+	@override late final _TranslationsAccountZhHk account = _TranslationsAccountZhHk._(_root);
 }
 
 // Path: common
@@ -368,9 +368,9 @@ class _TranslationsLoginZhHk extends _TranslationsLoginEn {
 	@override String get createANewAccount => '創建一個新帳戶';
 }
 
-// Path: myAccount
-class _TranslationsMyAccountZhHk extends _TranslationsMyAccountEn {
-	_TranslationsMyAccountZhHk._(_TranslationsZhHk root) : this._root = root, super._(root);
+// Path: account
+class _TranslationsAccountZhHk extends _TranslationsAccountEn {
+	_TranslationsAccountZhHk._(_TranslationsZhHk root) : this._root = root, super._(root);
 
 	@override final _TranslationsZhHk _root; // ignore: unused_field
 
@@ -403,8 +403,8 @@ extension on _TranslationsEn {
 			'login.forgotPassword': 'Forgot password',
 			'login.noAccount': 'No Account?',
 			'login.createANewAccount': 'Create a new account',
-			'myAccount.title': 'My Account',
-			'myAccount.logout': 'Logout',
+			'account.title': 'My Account',
+			'account.logout': 'Logout',
 		};
 	}
 }
@@ -430,8 +430,8 @@ extension on _TranslationsZhCn {
 			'login.forgotPassword': '忘记了密码',
 			'login.noAccount': '没有帐户？',
 			'login.createANewAccount': '创建一个新帐户',
-			'myAccount.title': '我的帐户',
-			'myAccount.logout': '登出',
+			'account.title': '我的帐户',
+			'account.logout': '登出',
 		};
 	}
 }
@@ -457,8 +457,8 @@ extension on _TranslationsZhHk {
 			'login.forgotPassword': '忘記了密碼',
 			'login.noAccount': '沒有帳戶？',
 			'login.createANewAccount': '創建一個新帳戶',
-			'myAccount.title': '我的帳戶',
-			'myAccount.logout': '登出',
+			'account.title': '我的帳戶',
+			'account.logout': '登出',
 		};
 	}
 }

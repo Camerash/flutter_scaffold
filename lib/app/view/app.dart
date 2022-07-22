@@ -14,12 +14,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _router = getIt<AppRouter>();
+    final _authCubit = getIt<AuthCubit>();
     return BlocListener<AuthCubit, AuthState>(
-      bloc: getIt<AuthCubit>(),
+      bloc: _authCubit,
       listener: (context, state) {
         // Push home route when user is authenticated
         if (state is AuthStateAuthenticated) {
-          // FIXME:
+          getIt<AppRouter>().replaceAll([const HomeRoute()]);
         } else if (state is AuthStateUnauthenticated) {
           getIt<AppRouter>().replaceAll([const LoginRoute()]);
         }
@@ -29,7 +30,9 @@ class App extends StatelessWidget {
         routerDelegate: AutoRouterDelegate(
           _router,
           initialRoutes: [
-            // FIXME:
+            if (_authCubit.state is AuthStateUnauthenticated)
+              const LoginRoute(),
+            if (_authCubit.state is AuthStateAuthenticated) const HomeRoute(),
           ],
         ),
         routeInformationParser: _router.defaultRouteParser(),
