@@ -54,12 +54,13 @@ class _LoginViewState extends State<LoginPage> {
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'assets/icons/app_icon_foreground.png',
-                          fit: BoxFit.cover,
-                          alignment: Alignment.topCenter,
-                          // color: Colors.white,
-                          scale: 2,
+                        SizedBox(
+                          height: 100,
+                          child: Image.asset(
+                            'assets/icons/app_icon_foreground.png',
+                            fit: BoxFit.contain,
+                            alignment: Alignment.topCenter,
+                          ),
                         ),
                         const SizedBox(height: 32),
                         ReactiveTextField(
