@@ -23,7 +23,7 @@ class AppRouter extends _i3.RootStackRouter {
   final Map<String, _i3.PageFactory> pagesMap = {
     LoginRoute.name: (routeData) {
       return _i3.AdaptivePage<dynamic>(
-          routeData: routeData, child: _i1.LoginPage());
+          routeData: routeData, child: const _i1.LoginPage());
     },
     HomeRoute.name: (routeData) {
       return _i3.AdaptivePage<dynamic>(
