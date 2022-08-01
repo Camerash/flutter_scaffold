@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: getIt<AuthCubit>(),
-      child: this,
+      child: LoginView(),
     );
   }
 }
