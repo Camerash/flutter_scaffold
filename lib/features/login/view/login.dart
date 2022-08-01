@@ -7,7 +7,7 @@ import 'package:flutter_scaffold/utils/extensions/theme.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {

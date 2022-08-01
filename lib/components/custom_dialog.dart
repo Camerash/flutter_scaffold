@@ -15,12 +15,12 @@ class DialogButtonData {
 
 class CustomDialog extends StatelessWidget {
   const CustomDialog({
-    Key? key,
+    super.key,
     this.title,
     this.content,
     this.actions = const [],
     this.gap = 16,
-  }) : super(key: key);
+  });
 
   final Widget? title;
   final Widget? content;

@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 class PlaceholderCachedImage extends StatelessWidget {
   const PlaceholderCachedImage({
-    Key? key,
+    super.key,
     required this.url,
     this.fit,
     this.color,
     this.colorBlendMode,
     this.onTap,
     this.child,
-  }) : super(key: key);
+  });
 
   final String? url;
   final BoxFit? fit;

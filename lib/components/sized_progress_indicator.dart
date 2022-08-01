@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class SizedProgressIndicator extends StatelessWidget {
   const SizedProgressIndicator({
-    Key? key,
+    super.key,
     this.size = 36,
-  }) : super(key: key);
+  });
 
   final double size;
 

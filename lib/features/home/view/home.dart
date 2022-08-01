@@ -4,7 +4,7 @@ import 'package:flutter_scaffold/features/auth/auth.dart';
 import 'package:flutter_scaffold/i18n/translations.g.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

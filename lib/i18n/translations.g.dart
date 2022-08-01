@@ -5,7 +5,7 @@
  * Locales: 3
  * Strings: 60 (20.0 per locale)
  *
- * Built on 2022-08-01 at 08:11 UTC
+ * Built on 2022-08-01 at 08:12 UTC
  */
 
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api, unnecessary_string_interpolations, avoid_escaping_inner_quotes

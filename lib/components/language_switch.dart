@@ -8,7 +8,7 @@ const sortedLocale = [
 ];
 
 class LanguageSwitch extends StatefulWidget {
-  const LanguageSwitch({Key? key}) : super(key: key);
+  const LanguageSwitch({super.key});
 
   @override
   State<LanguageSwitch> createState() => _LanguageSwitchState();

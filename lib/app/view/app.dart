@@ -14,10 +14,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _router = getIt<AppRouter>();
-    final _authCubit = getIt<AuthCubit>();
+    final router = getIt<AppRouter>();
+    final authCubit = getIt<AuthCubit>();
     return BlocListener<AuthCubit, AuthState>(
-      bloc: _authCubit,
+      bloc: authCubit,
       listener: (context, state) {
         // Push home route when user is authenticated
         if (state is AuthStateAuthenticated) {
@@ -30,14 +30,14 @@ class App extends StatelessWidget {
         child: MaterialApp.router(
           theme: themeData,
           routerDelegate: AutoRouterDelegate(
-            _router,
+            router,
             initialRoutes: [
-              if (_authCubit.state is AuthStateUnauthenticated)
+              if (authCubit.state is AuthStateUnauthenticated)
                 const LoginRoute(),
-              if (_authCubit.state is AuthStateAuthenticated) const HomeRoute(),
+              if (authCubit.state is AuthStateAuthenticated) const HomeRoute(),
             ],
           ),
-          routeInformationParser: _router.defaultRouteParser(),
+          routeInformationParser: router.defaultRouteParser(),
           locale: TranslationProvider.of(context).flutterLocale,
           supportedLocales: LocaleSettings.supportedLocales,
           localizationsDelegates: GlobalMaterialLocalizations.delegates,
