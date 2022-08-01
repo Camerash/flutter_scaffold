@@ -7,6 +7,7 @@ import 'package:flutter_scaffold/core/navigation/app_router.gr.dart';
 import 'package:flutter_scaffold/features/auth/auth.dart';
 import 'package:flutter_scaffold/i18n/translations.g.dart';
 import 'package:flutter_scaffold/theme.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -25,20 +26,22 @@ class App extends StatelessWidget {
           getIt<AppRouter>().replaceAll([const LoginRoute()]);
         }
       },
-      child: MaterialApp.router(
-        theme: themeData,
-        routerDelegate: AutoRouterDelegate(
-          _router,
-          initialRoutes: [
-            if (_authCubit.state is AuthStateUnauthenticated)
-              const LoginRoute(),
-            if (_authCubit.state is AuthStateAuthenticated) const HomeRoute(),
-          ],
+      child: GlobalLoaderOverlay(
+        child: MaterialApp.router(
+          theme: themeData,
+          routerDelegate: AutoRouterDelegate(
+            _router,
+            initialRoutes: [
+              if (_authCubit.state is AuthStateUnauthenticated)
+                const LoginRoute(),
+              if (_authCubit.state is AuthStateAuthenticated) const HomeRoute(),
+            ],
+          ),
+          routeInformationParser: _router.defaultRouteParser(),
+          locale: TranslationProvider.of(context).flutterLocale,
+          supportedLocales: LocaleSettings.supportedLocales,
+          localizationsDelegates: GlobalMaterialLocalizations.delegates,
         ),
-        routeInformationParser: _router.defaultRouteParser(),
-        locale: TranslationProvider.of(context).flutterLocale,
-        supportedLocales: LocaleSettings.supportedLocales,
-        localizationsDelegates: GlobalMaterialLocalizations.delegates,
       ),
     );
   }
